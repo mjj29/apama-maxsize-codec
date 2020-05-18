@@ -1,0 +1,28 @@
+connectivityPlugins:
+  maxSizeCodec:
+    libraryName: connectivity-maxsize-codec
+    class: MaxSizeCodec
+  jsonCodec:
+    libraryName: connectivity-json-codec
+    class: JSONCodec
+  stringCodec:
+    libraryName: connectivity-string-codec
+    class: StringCodec
+  diagnosticCodec:
+    libraryName: DiagnosticCodec
+    class: DiagnosticCodec
+  nullTransport:
+    classpath: ${APAMA_HOME}/lib/connectivity-unit-test-harness.jar
+    class: com.softwareag.connectivity.testplugins.NullTransport
+
+startChains:
+  batchChain:
+    - apama.eventMap
+    - jsonCodec
+    - stringCodec
+    - maxSizeCodec:
+        maxSizeBytes: 5000
+    - diagnosticCodec:
+        output: file
+        fileName: after.txt
+    - nullTransport
