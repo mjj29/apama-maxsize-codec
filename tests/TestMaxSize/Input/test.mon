@@ -16,7 +16,7 @@ monitor Testcase
 				s := s + "0";
 				j := j + 1;
 			}
-			send Data(s) to "batchChain";
+			send Data(s) to "maxSizeChain";
 			i := i + 1000;
 		}
 	}

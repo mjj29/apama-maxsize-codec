@@ -16,7 +16,7 @@ connectivityPlugins:
     class: com.softwareag.connectivity.testplugins.NullTransport
 
 startChains:
-  batchChain:
+  maxSizeChain:
     - apama.eventMap
     - jsonCodec
     - stringCodec

@@ -36,7 +36,7 @@ To run the tests for the plugin you will need to use an Apama command prompt to 
 
     pysys run
 
-## Using the batching codec
+## Using the max size codec
 
 As a codec in a connectivity chain you will need to first import the plugin into your configuration:
 
@@ -45,9 +45,9 @@ As a codec in a connectivity chain you will need to first import the plugin into
         libraryName: connectivity-maxsize-codec
 		  class: MaxSizeCodec
 
-You can now use the batching codec in a chain definition:
+You can now use the max size codec in a chain definition:
 
-    batchingChain:
+    maxSizeChain:
 	    - apama.eventMap
        - mapperCodec:
 		    # ... mapping configuration
