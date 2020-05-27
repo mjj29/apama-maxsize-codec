@@ -14,7 +14,7 @@ In an Apama command prompt on Linux run:
 
 On Windows run:
 
-    g++ -std=c++11 -o %APAMA_WORK%\lib\connectivity-maxsize-codec.dll -I%APAMA_HOME%\include -L%APAMA_HOME%\lib -lapclient -I. -shared MaxSizeCodec.cpp
+    g++ -std=c++11 -o %APAMA_WORK%\lib\connectivity-maxsize-codec.dll -I%APAMA_HOME%\include -L%APAMA_HOME%\lib -I. -shared MaxSizeCodec.cpp -lapclient
 
 ## Building using Docker
 
